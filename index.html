@@ -51,38 +51,37 @@
             filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
         }
 
-        /* HEADER: Adjusted to place text ABOVE the woman's back */
+        /* HEADER: Text sits perfectly above the woman's back */
         header {
             position: relative;
             height: 95vh;
             margin-top: 90px;
-            background: linear-gradient(rgba(4, 14, 20, 0.4), rgba(4, 14, 20, 0.6)), 
+            background: linear-gradient(rgba(4, 14, 20, 0.3), rgba(4, 14, 20, 0.5)), 
                         url('header.png');
             background-size: cover;
-            background-position: center 20%; /* Shifts image focus slightly */
+            background-position: center 20%; 
             display: flex;
-            align-items: flex-start; /* Aligns content to the top */
+            align-items: flex-start; 
             justify-content: center;
             text-align: center;
             border-bottom: 4px solid var(--amethyst);
         }
 
         .header-content {
-            margin-top: 80px; /* Precise gap to sit text above the back */
+            margin-top: 80px; 
             z-index: 1000;
         }
 
+        /* HARD CHANGE: Solid high-saturation Azure with depth */
         .header-content h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.8rem; /* Slightly reduced for a cleaner fit */
+            font-size: 3.8rem;
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 2px;
-            background: linear-gradient(to right, var(--azure), var(--electric-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--azure); /* Solid saturated color */
             line-height: 1.1;
-            text-shadow: 0px 4px 12px rgba(0,0,0,0.8);
+            text-shadow: 0px 4px 20px rgba(0,0,0,1), 0px 0px 10px rgba(0,127,255,0.4);
         }
 
         .promo-banner {
@@ -249,6 +248,10 @@
             <div class="item">
                 <strong>Premium Rica Waxing</strong>
                 <p>Elite Italian wax for long-lasting, silky smooth results.</p>
+            </div>
+            <div class="item">
+                <strong>Razor Waxing</strong>
+                <p>Fast and efficient hair removal for a clean, professional finish.</p>
             </div>
             <div class="item">
                 <strong>Honey & Aloe Care</strong>
