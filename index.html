@@ -44,19 +44,19 @@
         .logo {
             position: absolute;
             top: 10px; 
-            height: 220px; /* Thrice the standard size */
+            height: 240px; /* Thrice the standard size */
             width: auto;
             z-index: 2001;
             filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
         }
 
-        /* Hero Header */
+        /* Hero Header with Female client + Male therapist hands focus */
         header {
             position: relative;
             height: 85vh;
             margin-top: 90px;
             background: linear-gradient(rgba(4, 14, 20, 0.4), rgba(4, 14, 20, 0.7)), 
-                        url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1600&q=80');
+                        url('https://images.unsplash.com/photo-1519824141121-b97674299873?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -86,17 +86,17 @@
             letter-spacing: 3px;
         }
 
-        /* Service Strips */
+        /* Service Strips - Alternating Layout */
         .strip {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            min-height: 600px;
+            min-height: 550px;
             background: var(--matte-gray);
             border-bottom: 1px solid #1a262e;
         }
 
         .strip-content {
-            padding: 10% 12%;
+            padding: 8% 10%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -106,12 +106,13 @@
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             color: var(--electric-blue);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             text-transform: uppercase;
         }
 
-        .item { margin-bottom: 25px; border-left: 3px solid var(--amethyst); padding-left: 20px; }
+        .item { margin-bottom: 20px; border-left: 3px solid var(--amethyst); padding-left: 20px; }
         .item strong { color: var(--azure); display: block; font-size: 1.1rem; text-transform: uppercase; }
+        .item p { margin: 5px 0 0 0; color: #aaa; font-size: 0.95rem; }
 
         .strip-img {
             background-size: cover;
@@ -128,13 +129,13 @@
         .icon-grid {
             display: flex;
             justify-content: center;
-            gap: 50px;
-            margin-bottom: 50px;
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
-        .icon-box { text-align: center; }
-        .icon-box span { font-size: 3rem; display: block; margin-bottom: 10px; color: var(--amethyst); }
-        .icon-box p { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--electric-blue); }
+        .icon-box { text-align: center; min-width: 100px; }
+        .icon-box span { font-size: 2.5rem; display: block; margin-bottom: 10px; color: var(--amethyst); }
+        .icon-box p { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--electric-blue); }
 
         .btn {
             display: inline-block;
@@ -146,17 +147,18 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: 0.3s;
+            border: 2px solid transparent;
         }
 
-        .btn:hover { background: var(--electric-blue); color: var(--black-pearl); }
+        .btn:hover { background: transparent; border-color: var(--electric-blue); color: var(--electric-blue); }
 
-        .phone { font-size: 2.8rem; color: #fff; margin: 40px 0; display: block; }
+        .phone { font-size: 2.8rem; color: #fff; margin: 40px 0; display: block; font-weight: 600; }
 
         @media (max-width: 768px) {
-            .logo { height: 130px; top: 15px; }
+            .logo { height: 140px; top: 15px; }
             .header-content h1 { font-size: 2.5rem; }
             .strip { grid-template-columns: 1fr; }
-            .strip-img { height: 300px; }
+            .strip-img { height: 350px; }
             .icon-grid { flex-wrap: wrap; gap: 20px; }
         }
     </style>
@@ -183,15 +185,15 @@
             <h2>Elite Massages</h2>
             <div class="item">
                 <strong>Swedish Relaxation</strong>
-                <p>Designed for absolute calm and stress recovery.</p>
+                <p>Gentle strokes designed for absolute calm and stress recovery.</p>
             </div>
             <div class="item">
-                <strong>Deep Tissue</strong>
-                <p>Focused pressure points to release deep muscle knots.</p>
+                <strong>Deep Tissue Therapy</strong>
+                <p>Focused pressure points to release deep-seated muscle knots.</p>
             </div>
             <div class="item">
                 <strong>Aromatherapy</strong>
-                <p>A sensory experience using premium essential oils.</p>
+                <p>A restorative sensory experience using premium essential oils.</p>
             </div>
         </div>
         <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1000&q=80');"></div>
@@ -199,21 +201,52 @@
 
     <section class="strip" style="direction: rtl;">
         <div class="strip-content" style="direction: ltr;">
-            <h2>Body Polishing</h2>
+            <h2>Skin Scrubs</h2>
             <div class="item">
-                <strong>Himalayan Salt Glow</strong>
-                <p>Mineral exfoliation for an instant, healthy radiance.</p>
+                <strong>Himalayan Pink Salt</strong>
+                <p>Mineral-rich exfoliation for an instant, healthy radiance.</p>
             </div>
             <div class="item">
+                <strong>Organic Herb Infusion</strong>
+                <p>Deeply soothing botanical care tailored for sensitive skin.</p>
+            </div>
+        </div>
+        <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1000&q=80');"></div>
+    </section>
+
+    <section class="strip">
+        <div class="strip-content">
+            <h2>Body Polishing</h2>
+            <div class="item">
                 <strong>Cacao & Coffee Polish</strong>
-                <p>Firming and hydrating treatments for smooth skin.</p>
+                <p>Stimulating caffeine-infused treatment to firm and brighten skin.</p>
+            </div>
+            <div class="item">
+                <strong>Luxury Tan Removal</strong>
+                <p>A decadent treatment designed to reveal a soft, natural glow.</p>
             </div>
         </div>
         <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1601053416244-659f81f18579?auto=format&fit=crop&w=1000&q=80');"></div>
     </section>
 
+    <section class="strip" style="direction: rtl;">
+        <div class="strip-content" style="direction: ltr;">
+            <h2>Smooth Waxing</h2>
+            <div class="item">
+                <strong>Premium Rica Waxing</strong>
+                <p>Luxury Italian wax for long-lasting, silky smooth results.</p>
+            </div>
+            <div class="item">
+                <strong>Honey & Aloe Care</strong>
+                <p>Traditional, natural hair removal for a clean and soft finish.</p>
+            </div>
+        </div>
+        <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1000&q=80');"></div>
+    </section>
+
     <section class="footer">
         <h2>Professional therapist at your doorstep</h2>
+        <p>Expert Wellness Delivered Across Pune</p>
         
         <div class="icon-grid">
             <div class="icon-box"><span>✦</span><p>Premium</p></div>
