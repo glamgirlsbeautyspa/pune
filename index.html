@@ -37,7 +37,7 @@
             z-index: 1999;
         }
 
-        /* THE ABSOLUTE STATIC LOGO - Sharp & Unmoving */
+        /* THE ABSOLUTE STATIC LOGO */
         .logo {
             position: fixed !important;
             top: 10px !important;
@@ -45,14 +45,12 @@
             height: 240px;
             width: auto;
             z-index: 9999 !important;
-            /* Shadow Removed for Sharpness */
             filter: none !important; 
             pointer-events: none;
             margin: 0 !important;
-            /* High-Performance Locking */
             transform: translate3d(0, 0, 0);
             -webkit-transform: translate3d(0, 0, 0);
-            image-rendering: -webkit-optimize-contrast; /* Sharp edges */
+            image-rendering: -webkit-optimize-contrast;
         }
 
         header {
@@ -84,10 +82,7 @@
             letter-spacing: 2px;
             color: var(--aquarius-cyan);
             line-height: 1.1;
-            text-shadow: 
-                0 0 10px rgba(0, 251, 255, 0.8),
-                0 0 20px rgba(0, 251, 255, 0.4),
-                2px 2px 5px rgba(0, 0, 0, 1);
+            text-shadow: 0 0 10px rgba(0, 251, 255, 0.8), 0 0 20px rgba(0, 251, 255, 0.4), 2px 2px 5px rgba(0, 0, 0, 1);
         }
 
         .promo-banner {
@@ -173,11 +168,25 @@
 
         .phone { font-size: 2.8rem; color: #fff; margin: 40px 0; display: block; font-weight: 600; }
 
+        /* --- MOBILE OPTIMIZATION BLOCK --- */
         @media (max-width: 768px) {
-            .logo { height: 140px; top: 15px !important; }
-            .header-content h1 { font-size: 2.2rem; }
-            .strip { grid-template-columns: 1fr; }
-            .strip-img { height: 350px; background-size: cover !important; }
+            nav { height: 60px; }
+            .logo { 
+                height: 100px !important; /* Scaled for mobile */
+                top: 5px !important; 
+                left: 50% !important; 
+                transform: translateX(-50%) !important; /* Centered on mobile */
+            }
+            header { margin-top: 60px; height: 70vh; }
+            .header-content { margin-top: 120px; }
+            .header-content h1 { font-size: 1.8rem; letter-spacing: 1px; }
+            .strip { grid-template-columns: 1fr; } /* Stack vertically */
+            .strip-img { height: 300px; order: 1; } /* Image first on mobile */
+            .strip-content { order: 2; padding: 40px 20px; }
+            .phone { font-size: 1.8rem; }
+            .btn { padding: 15px 30px; width: 90%; font-size: 0.9rem; }
+            .icon-grid { gap: 15px; flex-wrap: wrap; }
+            .icon-box { min-width: 80px; }
         }
     </style>
 </head>
@@ -200,7 +209,7 @@
         <div class="strip-content">
             <h2>Elite Massages</h2>
             <div class="item"><strong>Swedish Relaxation</strong><p>Gentle strokes designed for deep calm and total stress recovery.</p></div>
-            <div class="item"><strong>Deep Tissue Therapy</strong><p>Focused pressure points to release muscle knots.</p></div>
+            <div class="item"><strong>Deep Tissue Therapy</strong><p>Focused pressure points to release deep-seated muscle knots.</p></div>
             <div class="item"><strong>Aromatherapy</strong><p>A restorative sensory experience using premium essential oils.</p></div>
         </div>
         <div class="strip-img" id="elite-massage-img" style="background-image: url('massage.png');"></div>
