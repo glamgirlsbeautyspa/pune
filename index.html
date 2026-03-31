@@ -10,7 +10,7 @@
             --black-pearl: #040e14;
             --amethyst: #9b59b6;
             --aquarius-cyan: #00fbff;
-            --electric-blue: #00d2ff;
+            --electric-blue: #00d2ff; /* Now used for Header Text */
             --azure: #007fff;
             --matte-gray: #0c1216;
             --text-silver: #f4f4f4;
@@ -80,9 +80,16 @@
             padding: 0 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--aquarius-cyan);
+            color: var(--electric-blue); /* ENHANCEMENT: Matches Section Headers */
             line-height: 1.1;
-            text-shadow: 0 0 10px rgba(0, 251, 255, 0.8), 0 0 20px rgba(0, 251, 255, 0.4), 2px 2px 5px rgba(0, 0, 0, 1);
+            /* REFINED GLOW: Deep Blue/Cyan shadow for clarity */
+            text-shadow: 
+                0 0 10px rgba(0, 210, 255, 0.6),
+                2px 2px 5px rgba(0, 0, 0, 1),
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
         }
 
         .promo-banner {
@@ -170,7 +177,7 @@
 
         /* --- MOBILE OPTIMIZATION BLOCK --- */
         @media (max-width: 768px) {
-            body { padding-bottom: 120px; } /* OCD FIX: Creates extra scroll room at the bottom */
+            body { padding-bottom: 120px; }
             nav { height: 60px; }
             .logo { 
                 height: 100px !important; 
@@ -199,7 +206,7 @@
     <header>
         <div class="header-content">
             <h1>Get Super Glam<br>Services at home</h1>
-            <p style="letter-spacing: 5px; font-weight: 600; margin-top: 15px; color: #fff; text-shadow: 0 0 10px var(--aquarius-cyan);">LUXURY SPA • PUNE</p>
+            <p style="letter-spacing: 5px; font-weight: 600; margin-top: 15px; color: #fff; text-shadow: 0 0 10px var(--electric-blue);">LUXURY SPA • PUNE</p>
         </div>
     </header>
 
