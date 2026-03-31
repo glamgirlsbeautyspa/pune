@@ -4,65 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glam Girl - Parlour & Spa | Luxury Home Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
+            /* High Saturation Brand Colors */
+            --black-pearl: #040e14;
             --amethyst: #9b59b6;
             --electric-blue: #00d2ff;
-            --deep-purple: #1a0026;
-            --soft-white: #fdfdfd;
+            --azure: #007fff;
+            --text-silver: #e0e0e0;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
-            background-color: var(--soft-white);
-            color: #333;
+            background-color: var(--black-pearl);
+            color: var(--text-silver);
+            line-height: 1.6;
         }
 
-        /* Hero Section */
+        /* Hero Section with Professional Masseur Focus */
         header {
-            background: linear-gradient(rgba(26, 0, 38, 0.6), rgba(26, 0, 38, 0.6)), 
-                        url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(4, 14, 20, 0.7), rgba(4, 14, 20, 0.8)), 
+                        url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
-            height: 75vh;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
             padding: 0 20px;
+            border-bottom: 3px solid var(--electric-blue);
         }
 
-        /* Fixed Logo Scaling - This ensures the full logo is visible */
+        /* Logo Scaling - Linked to logo.jpg */
         .logo {
             width: 100%;
-            max-width: 450px; /* Increased size to show the full logo text clearly */
+            max-width: 400px;
             height: auto;
-            margin-bottom: 25px;
-            filter: drop-shadow(0px 8px 15px rgba(0,0,0,0.4));
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin: 0;
-            letter-spacing: 2px;
-            background: linear-gradient(to right, #e0aaff, var(--electric-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            filter: drop-shadow(0px 0px 15px var(--azure));
         }
 
         .promo-banner {
-            background: linear-gradient(to right, var(--deep-purple), var(--amethyst));
+            background: linear-gradient(90deg, var(--azure), var(--amethyst));
             color: white;
-            padding: 18px;
+            padding: 20px;
             text-align: center;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 5px 20px rgba(0, 210, 255, 0.4);
         }
 
         .container {
@@ -74,92 +69,98 @@
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            gap: 35px;
         }
 
         .service-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.03);
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
-            border-top: 6px solid var(--amethyst);
-            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: var(--electric-blue);
+            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
         }
 
         .service-card h2 {
             font-family: 'Playfair Display', serif;
-            color: var(--deep-purple);
-            font-size: 1.8rem;
+            color: var(--electric-blue);
+            font-size: 2rem;
             margin-bottom: 25px;
-            text-align: center;
+            border-bottom: 2px solid var(--amethyst);
+            padding-bottom: 10px;
         }
 
         .sub-service {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 25px;
         }
 
-        .sub-service:last-child { border-bottom: none; }
-
         .sub-service strong {
-            color: var(--amethyst);
+            color: var(--azure);
             display: block;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 5px;
         }
 
         .contact-section {
-            background: var(--deep-purple);
+            background: linear-gradient(var(--black-pearl), #0a1a24);
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 100px 20px;
+            border-top: 1px solid rgba(155, 89, 182, 0.3);
         }
 
         .contact-section h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 15px;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--electric-blue), var(--amethyst));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .btn {
             display: inline-block;
-            background: linear-gradient(45deg, var(--amethyst), var(--electric-blue));
+            background: linear-gradient(45deg, var(--azure), var(--electric-blue));
             color: white;
-            padding: 18px 45px;
+            padding: 20px 50px;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: 700;
+            font-size: 1.2rem;
             margin-top: 30px;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(155, 89, 182, 0.3);
+            text-transform: uppercase;
+            box-shadow: 0 10px 25px rgba(0, 127, 255, 0.4);
         }
 
         .btn:hover {
-            box-shadow: 0 15px 30px rgba(0, 210, 255, 0.4);
-            transform: scale(1.05);
+            transform: scale(1.08);
+            box-shadow: 0 15px 35px rgba(0, 210, 255, 0.6);
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .logo { max-width: 280px; }
+            .logo { max-width: 300px; }
+            header { height: 50vh; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logo.png" alt="Glam Girl Parlour and Spa" class="logo">
-        <p style="font-size: 1.4rem; letter-spacing: 1px; font-style: italic;">Professional Wellness Delivered to Your Doorstep</p>
+        <img src="logo.jpg" alt="Glam Girl Parlour and Spa" class="logo">
+        <p style="font-size: 1.4rem; color: var(--electric-blue); font-weight: 300; letter-spacing: 2px;">Vibrant. Professional. Exclusive.</p>
     </header>
 
     <div class="promo-banner">
-        GET 600/- OFF YOUR FIRST SESSION | USE CODE: <strong>GGPS</strong>
+        FIRST BOOKING DISCOUNT: 600/- OFF | USE CODE: GGPS
     </div>
 
     <div class="container">
@@ -168,57 +169,57 @@
                 <h2>Elite Massages</h2>
                 <div class="sub-service">
                     <strong>Deep Tissue Therapy</strong>
-                    Targeting deep muscle groups to alleviate chronic tension and physical fatigue.
+                    Expert male therapists using targeted pressure to release intense muscle knots.
                 </div>
                 <div class="sub-service">
-                    <strong>Swedish Relaxation</strong>
-                    Long, fluid strokes designed to calm the nervous system and improve circulation.
+                    <strong>Swedish Flow</strong>
+                    High-end relaxation technique focusing on circulation and stress reduction.
                 </div>
                 <div class="sub-service">
-                    <strong>Shiatsu & Acupressure</strong>
-                    Traditional Japanese techniques to balance energy flow and relieve localized pain.
+                    <strong>Acupressure Healing</strong>
+                    Strategic pressure point therapy to restore energy and relieve body pain.
                 </div>
             </div>
 
             <div class="service-card">
-                <h2>Rejuvenating Scrubs</h2>
+                <h2>Body Polishing</h2>
                 <div class="sub-service">
-                    <strong>Himalayan Pink Salt</strong>
-                    Deep exfoliation that draws out toxins and leaves skin feeling incredibly smooth.
+                    <strong>Himalayan Salt Glow</strong>
+                    Vibrant mineral exfoliation for a smooth, detoxified skin texture.
                 </div>
                 <div class="sub-service">
-                    <strong>Cacao & Coffee Polish</strong>
-                    Antioxidant-rich scrub to firm the skin and provide a healthy, radiant glow.
+                    <strong>Coffee & Cacao Infusion</strong>
+                    A stimulating, high-saturation skin polish to firm and brighten.
                 </div>
                 <div class="sub-service">
-                    <strong>Organic Herb Infusion</strong>
-                    A gentle, soothing treatment using natural botanicals for sensitive skin types.
+                    <strong>Botanical Renewal</strong>
+                    Organic plant-based scrubs for deep hydration and sensitivity care.
                 </div>
             </div>
 
             <div class="service-card">
                 <h2>Smooth Waxing</h2>
                 <div class="sub-service">
-                    <strong>Premium Rica Waxing</strong>
-                    Italian lipo-soluble wax for a painless experience and long-lasting smoothness.
+                    <strong>Premium Rica Wax</strong>
+                    Luxury Italian waxing for ultra-smooth results with minimal irritation.
                 </div>
                 <div class="sub-service">
                     <strong>Chocolate Tan Removal</strong>
-                    Luxury chocolate wax that effectively removes tan while hydrating the skin.
+                    A decadent wax treatment that pulls away tan and reveals glowing skin.
                 </div>
                 <div class="sub-service">
-                    <strong>Honey & Aloe Care</strong>
-                    The classic choice for gentle hair removal, perfect for arms, legs, and full body.
+                    <strong>Organic Honey Care</strong>
+                    Pure, natural hair removal for a soft and gentle finish.
                 </div>
             </div>
         </div>
     </div>
 
     <section class="contact-section">
-        <h3>Experience Luxury at Home</h3>
-        <p>Book your appointment today for a premium spa experience in Pune.</p>
-        <p style="font-size: 2rem; margin: 25px 0;"><strong>+91 7972954291</strong></p>
-        <a href="https://wa.me/917972954291" class="btn">Book via WhatsApp</a>
+        <h3>Book Luxury at Home</h3>
+        <p style="font-size: 1.2rem; margin-bottom: 10px;">Available throughout Pune. Professional Male Staff Only.</p>
+        <p style="font-size: 2.5rem; color: var(--electric-blue); margin: 20px 0;"><strong>+91 7972954291</strong></p>
+        <a href="https://wa.me/917972954291" class="btn">Message via WhatsApp</a>
     </section>
 
 </body>
