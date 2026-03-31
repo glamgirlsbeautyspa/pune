@@ -9,7 +9,7 @@
         :root {
             --black-pearl: #040e14;
             --amethyst: #9b59b6;
-            --aquarius-cyan: #00fbff; /* High-visibility Aquarius highlight */
+            --aquarius-cyan: #00fbff;
             --electric-blue: #00d2ff;
             --azure: #007fff;
             --matte-gray: #0c1216;
@@ -37,21 +37,24 @@
             z-index: 1999;
         }
 
-        /* LOGO DOUBLE-LOCK: The absolute static fix */
+        /* THE NUCLEAR LOGO LOCK */
         .logo {
-            position: fixed; 
-            top: 10px; 
-            left: 5%;
+            position: fixed !important; /* Forces the browser to ignore other layout rules */
+            top: 10px !important; 
+            left: 5% !important;
             height: 240px; 
             width: auto;
-            z-index: 9999; /* Higher than all other elements */
+            z-index: 9999 !important; /* Ensures it stays on top of everything */
             filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
             pointer-events: none;
-            margin: 0;
-            will-change: transform; /* Forces browser to lock position */
+            margin: 0 !important;
+            padding: 0 !important;
+            /* Hardware Acceleration Fixes */
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+            backface-visibility: hidden;
         }
 
-        /* HEADER: Aquarius Glow Text */
         header {
             position: relative;
             height: 95vh;
@@ -79,9 +82,8 @@
             padding: 0 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--aquarius-cyan); /* Aquarius Highlight */
+            color: var(--aquarius-cyan);
             line-height: 1.1;
-            /* NEON GLOW: Multiple shadows for maximum visibility */
             text-shadow: 
                 0 0 10px rgba(0, 251, 255, 0.8),
                 0 0 20px rgba(0, 251, 255, 0.4),
@@ -172,7 +174,7 @@
         .phone { font-size: 2.8rem; color: #fff; margin: 40px 0; display: block; font-weight: 600; }
 
         @media (max-width: 768px) {
-            .logo { height: 140px; top: 15px; }
+            .logo { height: 140px; top: 15px !important; }
             .header-content h1 { font-size: 2.2rem; }
             .strip { grid-template-columns: 1fr; }
             .strip-img { height: 350px; background-size: cover !important; }
@@ -200,7 +202,7 @@
         <div class="strip-content">
             <h2>Elite Massages</h2>
             <div class="item"><strong>Swedish Relaxation</strong><p>Gentle strokes designed for deep calm and total stress recovery.</p></div>
-            <div class="item"><strong>Deep Tissue Therapy</strong><p>Focused pressure points to release deep-seated muscle knots.</p></div>
+            <div class="item"><strong>Deep Tissue Therapy</strong><p>Focused pressure points to release muscle knots.</p></div>
             <div class="item"><strong>Aromatherapy</strong><p>A restorative sensory experience using premium essential oils.</p></div>
         </div>
         <div class="strip-img" id="elite-massage-img" style="background-image: url('massage.png');"></div>
