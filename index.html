@@ -3,182 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glam Girl | Luxury Home Spa Pune</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Glam Girl Pune | Super Glam Services at Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --black-pearl: #040e14;
             --amethyst: #9b59b6;
             --electric-blue: #00d2ff;
             --azure: #007fff;
-            --matte-gray: #1a1a1a;
+            --matte-gray: #0c1216;
+            --text-silver: #f4f4f4;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             background-color: var(--black-pearl);
-            color: #ffffff;
+            color: var(--text-silver);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Top Navigation Bar */
+        /* Fixed Navigation */
         nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
             background: var(--black-pearl);
-            padding: 20px 5%;
-            display: flex;
-            justify-content: flex-start; /* Logo on the left */
-            align-items: center;
             border-bottom: 1px solid var(--azure);
+            z-index: 2000;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 5%;
+            align-items: center;
         }
 
+        /* 3X Large Logo Overlapping Header */
         .logo {
-            height: 60px; /* Smaller, professional size */
+            position: absolute;
+            top: 10px; 
+            height: 220px; /* Thrice the standard size */
             width: auto;
+            z-index: 2001;
+            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
         }
 
-        /* Hero Section - High Resolution & Matte Finish */
+        /* Hero Header */
         header {
             position: relative;
-            height: 65vh;
-            background: linear-gradient(rgba(4, 14, 20, 0.5), rgba(4, 14, 20, 0.5)), 
-                        url('https://images.unsplash.com/photo-1519824141121-b97674299873?auto=format&fit=crop&w=1600&q=80');
+            height: 85vh;
+            margin-top: 90px;
+            background: linear-gradient(rgba(4, 14, 20, 0.4), rgba(4, 14, 20, 0.7)), 
+                        url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            border-bottom: 4px solid var(--amethyst);
         }
 
-        .hero-content h1 {
+        .header-content h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 4.5rem;
             margin: 0;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            color: var(--electric-blue);
+            letter-spacing: 2px;
+            color: #ffffff;
+            line-height: 1.1;
         }
 
         .promo-banner {
             background: var(--azure);
             color: #fff;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            font-weight: 600;
-            letter-spacing: 2px;
+            font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 3px;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        .service-grid {
+        /* Service Strips */
+        .strip {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        /* Matte Service Cards - No Shadows */
-        .service-card {
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
             background: var(--matte-gray);
-            padding: 40px;
-            border: 1px solid var(--amethyst);
-            transition: background 0.3s ease;
+            border-bottom: 1px solid #1a262e;
         }
 
-        .service-card:hover {
-            background: #252525;
+        .strip-content {
+            padding: 10% 12%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .service-card h2 {
+        .strip-content h2 {
             font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
             color: var(--electric-blue);
-            font-size: 1.5rem;
-            margin-top: 0;
-            border-left: 4px solid var(--azure);
-            padding-left: 15px;
-        }
-
-        .sub-service {
-            margin-top: 25px;
-        }
-
-        .sub-service strong {
-            color: var(--amethyst);
-            display: block;
+            margin-bottom: 30px;
             text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
         }
 
-        .sub-service p {
-            font-size: 0.95rem;
-            color: #ccc;
-            margin: 5px 0;
+        .item { margin-bottom: 25px; border-left: 3px solid var(--amethyst); padding-left: 20px; }
+        .item strong { color: var(--azure); display: block; font-size: 1.1rem; text-transform: uppercase; }
+
+        .strip-img {
+            background-size: cover;
+            background-position: center;
         }
 
-        /* Contact Section - Solid Color Blocks */
-        .contact-section {
-            background: var(--matte-gray);
-            padding: 80px 20px;
+        /* Footer & Icons */
+        .footer {
+            background: var(--black-pearl);
+            padding: 100px 20px;
             text-align: center;
-            border-top: 2px solid var(--azure);
         }
 
-        .contact-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+        .icon-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 50px;
         }
+
+        .icon-box { text-align: center; }
+        .icon-box span { font-size: 3rem; display: block; margin-bottom: 10px; color: var(--amethyst); }
+        .icon-box p { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--electric-blue); }
 
         .btn {
             display: inline-block;
             background: var(--azure);
             color: white;
-            padding: 18px 40px;
+            padding: 22px 60px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-top: 30px;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
-        .btn:hover {
-            background: transparent;
-            border-color: var(--electric-blue);
-            color: var(--electric-blue);
-        }
+        .btn:hover { background: var(--electric-blue); color: var(--black-pearl); }
 
-        .phone-number {
-            font-size: 2rem;
-            color: var(--electric-blue);
-            display: block;
-            margin: 20px 0;
-            font-weight: 600;
-        }
+        .phone { font-size: 2.8rem; color: #fff; margin: 40px 0; display: block; }
 
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2rem; }
-            nav { justify-content: center; }
+            .logo { height: 130px; top: 15px; }
+            .header-content h1 { font-size: 2.5rem; }
+            .strip { grid-template-columns: 1fr; }
+            .strip-img { height: 300px; }
+            .icon-grid { flex-wrap: wrap; gap: 20px; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <img src="shared image.jpg" alt="Glam Girl" class="logo">
+        <img src="logo.jpg" alt="Glam Girl" class="logo">
     </nav>
 
     <header>
-        <div class="hero-content">
-            <h1>Stay Glam. Stay Home.</h1>
-            <p style="letter-spacing: 2px; font-weight: 300;">Luxury Salon & Spa Services in Pune</p>
+        <div class="header-content">
+            <h1>Get Super Glam<br>Services at home</h1>
+            <p style="letter-spacing: 5px; font-weight: 300; margin-top: 20px; color: var(--azure);">LUXURY SPA • PUNE</p>
         </div>
     </header>
 
@@ -186,62 +178,51 @@
         CODE: GGPS | 600/- OFF YOUR FIRST BOOKING
     </div>
 
-    <div class="container">
-        <div class="service-grid">
-            <div class="service-card">
-                <h2>Elite Massages</h2>
-                <div class="sub-service">
-                    <strong>Deep Tissue Therapy</strong>
-                    <p>Relieve chronic tension with professional male therapists specializing in sports-level recovery.</p>
-                </div>
-                <div class="sub-service">
-                    <strong>Swedish Relaxation</strong>
-                    <p>Designed to calm the mind and body. Perfect for a weekend reset.</p>
-                </div>
-                <div class="sub-service">
-                    <strong>Aromatherapy</strong>
-                    <p>A sensory journey using premium oils to revitalize your skin and mood.</p>
-                </div>
+    <section class="strip">
+        <div class="strip-content">
+            <h2>Elite Massages</h2>
+            <div class="item">
+                <strong>Swedish Relaxation</strong>
+                <p>Designed for absolute calm and stress recovery.</p>
             </div>
-
-            <div class="service-card">
-                <h2>Body Polishing</h2>
-                <div class="sub-service">
-                    <strong>Himalayan Salt Glow</strong>
-                    <p>Mineral-rich exfoliation for an instant, healthy radiance.</p>
-                </div>
-                <div class="sub-service">
-                    <strong>Cacao & Coffee Polish</strong>
-                    <p>A stimulating treatment to firm skin and provide a natural glow.</p>
-                </div>
-                <div class="sub-service">
-                    <strong>Botanical Renewal</strong>
-                    <p>Gentle, organic plant-based care for sensitive skin types.</p>
-                </div>
+            <div class="item">
+                <strong>Deep Tissue</strong>
+                <p>Focused pressure points to release deep muscle knots.</p>
             </div>
-
-            <div class="service-card">
-                <h2>Skin & Waxing</h2>
-                <div class="sub-service">
-                    <strong>Premium Rica Waxing</strong>
-                    <p>Luxury Italian wax for long-lasting, silky smooth results.</p>
-                </div>
-                <div class="sub-service">
-                    <strong>Chocolate Tan Removal</strong>
-                    <p>Effective tan removal that leaves skin feeling soft and hydrated.</p>
-                </div>
-                <div class="sub-service">
-                    <strong>Honey & Aloe Care</strong>
-                    <p>The traditional choice for gentle and clean hair removal.</p>
-                </div>
+            <div class="item">
+                <strong>Aromatherapy</strong>
+                <p>A sensory experience using premium essential oils.</p>
             </div>
         </div>
-    </div>
+        <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1000&q=80');"></div>
+    </section>
 
-    <section class="contact-section">
-        <h2>Expert Care. Anywhere.</h2>
-        <p>Available across Pune | Professional Male Therapists Only</p>
-        <span class="phone-number">7972954291</span>
+    <section class="strip" style="direction: rtl;">
+        <div class="strip-content" style="direction: ltr;">
+            <h2>Body Polishing</h2>
+            <div class="item">
+                <strong>Himalayan Salt Glow</strong>
+                <p>Mineral exfoliation for an instant, healthy radiance.</p>
+            </div>
+            <div class="item">
+                <strong>Cacao & Coffee Polish</strong>
+                <p>Firming and hydrating treatments for smooth skin.</p>
+            </div>
+        </div>
+        <div class="strip-img" style="background-image: url('https://images.unsplash.com/photo-1601053416244-659f81f18579?auto=format&fit=crop&w=1000&q=80');"></div>
+    </section>
+
+    <section class="footer">
+        <h2>Professional therapist at your doorstep</h2>
+        
+        <div class="icon-grid">
+            <div class="icon-box"><span>✦</span><p>Premium</p></div>
+            <div class="icon-box"><span>🛀</span><p>Relax</p></div>
+            <div class="icon-box"><span>✨</span><p>Glow</p></div>
+            <div class="icon-box"><span>🏡</span><p>Comfort</p></div>
+        </div>
+
+        <span class="phone">7972954291</span>
         <a href="https://wa.me/917972954291" class="btn">Book via WhatsApp</a>
     </section>
 
