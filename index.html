@@ -170,18 +170,20 @@
 
         /* --- MOBILE OPTIMIZATION BLOCK --- */
         @media (max-width: 768px) {
+            body { padding-bottom: 120px; } /* OCD FIX: Creates extra scroll room at the bottom */
             nav { height: 60px; }
             .logo { 
-                height: 100px !important; /* Scaled for mobile */
+                height: 100px !important; 
                 top: 5px !important; 
                 left: 50% !important; 
-                transform: translateX(-50%) !important; /* Centered on mobile */
+                transform: translateX(-50%) !important;
+                z-index: 9999 !important;
             }
             header { margin-top: 60px; height: 70vh; }
             .header-content { margin-top: 120px; }
             .header-content h1 { font-size: 1.8rem; letter-spacing: 1px; }
-            .strip { grid-template-columns: 1fr; } /* Stack vertically */
-            .strip-img { height: 300px; order: 1; } /* Image first on mobile */
+            .strip { grid-template-columns: 1fr; }
+            .strip-img { height: 300px; order: 1; }
             .strip-content { order: 2; padding: 40px 20px; }
             .phone { font-size: 1.8rem; }
             .btn { padding: 15px 30px; width: 90%; font-size: 0.9rem; }
