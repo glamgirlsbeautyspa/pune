@@ -40,7 +40,7 @@
             align-items: center;
         }
 
-        /* FIXED LOGO */
+        /* FIXED LOGO: Locked to viewport */
         .logo {
             position: fixed; 
             top: 10px; 
@@ -51,15 +51,15 @@
             filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
         }
 
-        /* HEADER: Text sits perfectly above the woman's back */
+        /* HEADER: Placement locked above back with Solid Black Pearl Text */
         header {
             position: relative;
             height: 95vh;
             margin-top: 90px;
-            background: linear-gradient(rgba(4, 14, 20, 0.3), rgba(4, 14, 20, 0.5)), 
+            background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), 
                         url('header.png');
             background-size: cover;
-            background-position: center 20%; 
+            background-position: center 20%;
             display: flex;
             align-items: flex-start; 
             justify-content: center;
@@ -68,20 +68,19 @@
         }
 
         .header-content {
-            margin-top: 80px; 
+            margin-top: 80px; /* Locked placement */
             z-index: 1000;
         }
 
-        /* HARD CHANGE: Solid high-saturation Azure with depth */
         .header-content h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.8rem;
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--azure); /* Solid saturated color */
+            color: var(--black-pearl); /* HARD CHANGE: Solid Black Pearl */
             line-height: 1.1;
-            text-shadow: 0px 4px 20px rgba(0,0,0,1), 0px 0px 10px rgba(0,127,255,0.4);
+            text-shadow: 0px 2px 4px rgba(255,255,255,0.3); /* Subtle lift for legibility */
         }
 
         .promo-banner {
@@ -169,7 +168,7 @@
 
         @media (max-width: 768px) {
             .logo { height: 140px; top: 15px; }
-            .header-content h1 { font-size: 2.2rem; }
+            .header-content h1 { font-size: 2.2rem; color: var(--black-pearl); }
             .header-content { margin-top: 40px; }
             .strip { grid-template-columns: 1fr; }
             .strip-img { height: 350px; background-size: cover !important; }
@@ -185,7 +184,7 @@
     <header>
         <div class="header-content">
             <h1>Get Super Glam<br>Services at home</h1>
-            <p style="letter-spacing: 5px; font-weight: 300; margin-top: 15px; color: var(--electric-blue);">LUXURY SPA • PUNE</p>
+            <p style="letter-spacing: 5px; font-weight: 600; margin-top: 15px; color: var(--black-pearl);">LUXURY SPA • PUNE</p>
         </div>
     </header>
 
@@ -250,12 +249,12 @@
                 <p>Elite Italian wax for long-lasting, silky smooth results.</p>
             </div>
             <div class="item">
-                <strong>Razor Waxing</strong>
-                <p>Fast and efficient hair removal for a clean, professional finish.</p>
-            </div>
-            <div class="item">
                 <strong>Honey & Aloe Care</strong>
                 <p>Traditional, natural hair removal for a clean and soft finish.</p>
+            </div>
+            <div class="item">
+                <strong>Razor Waxing</strong>
+                <p>Precision service for a smooth, irritation-free experience.</p>
             </div>
         </div>
         <div class="strip-img" style="background-image: url('waxing.jpg');"></div>
